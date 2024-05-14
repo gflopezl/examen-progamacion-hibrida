@@ -1,0 +1,7 @@
+{
+  "name": "examen-progamacion-hibrida",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
