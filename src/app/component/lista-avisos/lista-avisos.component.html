@@ -1,0 +1,26 @@
+<ion-list>
+  <ion-row *ngFor="let a of aviso" class="ion-padding-top">
+    <ion-col size="3">
+      <ion-avatar>
+        <ion-img [src]="a.foto"></ion-img>
+      </ion-avatar>
+    </ion-col>
+    <ion-col size="3">
+      <ion-item>
+        <ion-label>
+          <h2>{{ a.titulo }}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col size="4" class="ion-align-items-center">
+      <ion-label>{{ a.fechaAviso | date: 'dd-MM-yyyy'}}</ion-label>
+    </ion-col>
+    <ion-col size="2" class="ion-align-items-center">
+      <ion-buttons>
+        <ion-button (click)="borrarAviso(a.ID)">
+          <ion-icon name="trash-outline" color="danger"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+</ion-list>
